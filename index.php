@@ -23,17 +23,15 @@
             <div><p>Style Your Life</p></div>
             <div><img src="https://images.pexels.com/photos/4277507/pexels-photo-4277507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
         </div>
-        <div class="row img-vendor-logo pt-4">
+        <div class="row img-vendor-logo pt-5">
             <div class="col-4">
-                <div class="rounded-vendor">
-                    
-                </div>
+                <img src="./assets/image/vans.png" alt="Vans" class="w-100">
+            </div>
+            <div class="col-4 ">
+                <img src="./assets/image/adidas.png" alt="Adidas" class="w-100">
             </div>
             <div class="col-4">
-                test
-            </div>
-            <div class="col-4">
-                test
+                <img src="./assets/image/nike.png" alt="Nike" class="w-100">
             </div>
         </div>
     </div>
