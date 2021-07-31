@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+.header {
+    position: fixed;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #c8cbcc;
+}
+
+.header .buy-now {
+    padding: 90px;
+    /* height: 50px; */
+    background: #dc3545;
+    border-radius: 0px 0px 100px 100px;
+    width: 0px;
+}
+
+.header .buy-now a {
+    font-size: 23px;
+    color: white;
+    padding: 14px;
+    transform: translateX(-72px);
+    position: absolute;
+}
+
+.header .buy-now a:hover {
+    color: black;
+}
+
+.head-title {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+
+.head-title img {
+    width: 50px;
+}
+
+.content {
+    padding: 85px 255px 0px 255px;
+    height: 150em;
+}
+
+.img-utama1 {
+    height: 495px;
+    background: no-repeat;
+    background-image: url(https://images.vans.com/is/image/VansBrand/FA21_WadeGoodall_1390x556_SurfSecondary?wid=1390);
+    background-position: top;
+}
+
+.img-couple {
+    display: flex;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.img-couple img {
+    width: 90%;
+}
+
+
+.img-couple p {
+    margin: 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: xxx-large;
+    -webkit-text-stroke-width: medium;
+
+}
+
+.img-vendor-logo {
+    padding-top: 20px;
+
+}
+
+.rounded-vendor {
+    
+}
+
+.footer-content {
+    background: #111111;
+    height: 170px;
+}
+
+.footer-copy {
+    background: white;
+    height: 20px;
+}
+
+.footer-copy p {
+    background: white;
+    height: 40px;
+    text-align: center;
+    white-space: pre;
+    font-size: 14px;
+    padding-top: 10px;
+}
