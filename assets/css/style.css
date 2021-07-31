@@ -104,6 +104,29 @@ body {
     
 }
 
+.card {
+    width: fit-content;
+    height: fit-content;
+    border: 0 !important;
+}
+
+.card .card-header {
+    padding: 0;
+    border: 0;
+    background-color: blue;
+    /* height: ; */
+}
+
+.card .card-header img {
+    border: 0;
+    height: 200px;
+}
+
+.card .card-content {
+    height: 200px;
+}
+
+
 .footer-content {
     background: #111111;
     height: 170px;
