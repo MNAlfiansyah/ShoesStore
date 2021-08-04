@@ -50,7 +50,7 @@
                     </div>
                     <div class="size-product d-flex">
                         <span class="w-20 mt-4">Qty </span>
-                        <input type="number" name="qty" min=0 class="form-control mt-4" value="0" required>
+                        <input type="number" name="qty" min=1 class="form-control mt-4" value="0" required>
                     </div>
                     <input type="hidden" name="name" value="<?= $name ?>">
                     <input type="hidden" name="harga" value="<?= $harga ?>">
