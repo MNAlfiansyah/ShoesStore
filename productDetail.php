@@ -15,10 +15,11 @@
 <?php
     $base_url = "http://" . $_SERVER['SERVER_NAME'] ."/ShoesStore/";
 
-    $name = $_GET['name'];
-    $harga = $_GET['harga'];
-    $warna = $_GET['warna'];
-    $img_url = $_GET['img_url'];
+    $name = substr($_POST['name'], 0, -1);
+    $harga = (int)$_POST['harga'];
+    $warna = substr($_POST['warna'], 0, -1);
+    $img_url = substr($_POST['img_url'], 0, -1);
+
 ?>
 <body>
     <div class="header">

@@ -133,7 +133,7 @@ body {
 }
 
 .card .card-header img {
-    height: 115px;
+    height: 50%;
     object-fit: cover;
 }
 
@@ -145,7 +145,8 @@ body {
 
 .container-product {
     background: lightgrey;
-    margin: 40px 0px 0px 40px;
+    margin: 40px 0px 0px 40px;  
+    width: 75%;
 }
 
 .nama-product {
@@ -362,6 +363,10 @@ hr {
 
 .footer-img .fa-instagram {
     color: palevioletred;
+}
+
+.product-pointer{
+    cursor: pointer;
 }
 
 .footer-img img{

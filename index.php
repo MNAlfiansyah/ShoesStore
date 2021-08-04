@@ -18,7 +18,6 @@
         <div><span><a href='./aboutUs.php' class="head-title">About Us</a><span></div>
     </div>
     <div class="content">
-        <div class="img-utama1">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -39,8 +38,9 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            </div>
         </div>
+        <!-- <div class="img-utama1">
+        </div> -->
         <div class="img-couple">
             <div><img src="https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"></div>
             <div><p>Style Your Life</p></div>

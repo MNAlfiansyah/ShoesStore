@@ -35,21 +35,28 @@
         <div class="row">
             <?php
                 foreach ($dataProduct as $key => $dataP) {
-                    $link = $base_url."productDetail.php?name=".$dataP["name"]."&harga=".$dataP["harga"]."&warna=".$dataP["warna"]."&img_url=".$dataP["img_url"];
+                    // $link = $base_url."productDetail.php?name=".$dataP["name"]."&harga=".$dataP["harga"]."&warna=".$dataP["warna"]."&img_url=".$dataP["img_url"];
+                    // <a class="product-list" href='.$link.'>
+                    // </a>
+                    $link = './productDetail.php';
                     echo '
                     <div class="col-3 pb-4">
-                        <a class="product-list" href='.$link.'>
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="label">Baru</div>
-                                <img src='.$dataP["img_url"].' class="w-100">
+                        <form action="'.$link.'" method="post" class="product-pointer">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="label">Baru</div>
+                                    <img src='.$dataP["img_url"].' class="w-100">
+                                </div>
+                                <div class="card-content">
+                                    <p>'.str_replace('_',' ',$dataP["name"]).'</p>
+                                    <p>Rp. '.number_format($dataP["harga"],2,',','.').'</p>
+                                </div>
                             </div>
-                            <div class="card-content">
-                                <p>'.str_replace('_',' ',$dataP["name"]).'</p>
-                                <p>Rp. '.number_format($dataP["harga"],2,',','.').'</p>
-                            </div>
-                        </div>
-                        </a>
+                            <input type="hidden" name="name" value='.$dataP["name"].'/>
+                            <input type="hidden" name="harga" value='.$dataP["harga"].'/>
+                            <input type="hidden" name="warna" value='.$dataP["warna"].'/>
+                            <input type="hidden" name="img_url" value='.$dataP["img_url"].'/>
+                        </form>
                     </div>
                     ';
                 }
@@ -77,6 +84,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script>
+        $('.product-pointer').click(function () {
+            this.submit();
+        })
+    </script>
 </body>
 </html>
