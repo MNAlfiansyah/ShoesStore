@@ -236,7 +236,8 @@ body {
 }
 
 .shipping-product img {
-    width: 60%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .shipping-product .product-img {
