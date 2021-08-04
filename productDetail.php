@@ -10,7 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="./assets/image/shoes-logo.png"/>
+
 </head>
+<?php
+    $base_url = "http://" . $_SERVER['SERVER_NAME'] ."/ShoesStore/";
+
+    $name = $_GET['name'];
+    $harga = $_GET['harga'];
+    $warna = $_GET['warna'];
+    $img_url = $_GET['img_url'];
+?>
 <body>
     <div class="header">
         <div><span class="head-title"><a href='./index.php' class="head-title"><img src="./assets/image/shoes-logo.png"/>Shoes Store</a></span></div>
@@ -18,45 +27,45 @@
         <div><span><a href='./aboutUs.php' class="head-title">About Us</a><span></div>
     </div>
     <div class="content">
-        <div class="img-utama1">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://dealswayshop.co.in/wp-content/uploads/2018/08/banner-114.jpg" alt="Second slide">
+        <div class="text-center title-content"></div>
+        <form action=<?= "'./buyForm.php'"; ?> method="post">
+            <div class="row container-detail-product">
+                <div class="col-6 img-detail-product">
+                    <div class="container-product">
+                        <img src="<?= $img_url ?>" class="w-100">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://deerbrains.com/wp-content/uploads/2016/03/Tablet_homepage_banner_2048x783-1024x391.jpg" alt="First slide">
+                <div class="col-6">
+                    <p class="nama-product"><?= str_replace('_',' ',$name) ?></p>
+                    <p class="harga-product">Rp. <?= number_format($harga,2,',','.') ?></p>
+                    <p class="warna-product">Color - <?= $warna ?></p>
+                    <div class="size-product d-flex">
+                        <span class="w-20">Size </span>
+                        <select name="size" class="form-select" required>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                        </select>
+                    </div>
+                    <div class="size-product d-flex">
+                        <span class="w-20 mt-4">Qty </span>
+                        <input type="number" name="qty" min=0 class="form-control mt-4" value="0" required>
+                    </div>
+                    <input type="hidden" name="name" value="<?= $name ?>">
+                    <input type="hidden" name="harga" value="<?= $harga ?>">
+                    <input type="hidden" name="warna" value="<?= $warna ?>">
+                    <input type="hidden" name="img_url" value="<?= $img_url ?>">
+                    <input type="submit" value="BUY" class="buy-button btn btn-danger"/>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://www.sneaker4shoes.com/media/wysiwyg/infortis/slideshow/adidas-banner-1.jpg" alt="Third slide">
-                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            </div>
-        </div>
-        <div class="img-couple">
-            <div><img src="https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"></div>
-            <div><p>Style Your Life</p></div>
-            <div><img src="https://images.pexels.com/photos/4277507/pexels-photo-4277507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></div>
-        </div>
-        <div class="row img-vendor-logo pt-5">
-            <div class="col-4">
-                <img src="./assets/image/vans.png" alt="Vans" class="w-100">
-            </div>
-            <div class="col-4">
-                <img src="./assets/image/nike.png" alt="Nike" class="w-100">
-            </div>
-            <div class="col-4 ">
-                <img src="./assets/image/adidas.png" alt="Adidas" class="w-100">
-            </div>
-        </div>
+        </form>
+        <!-- <form method="post" action="./product.php">
+            <input type="hidden" name="test" value="test">
+            <button id="submit"></button>
+
+        </form> -->
+        
     </div>
     <div class="footer">
         <div class="footer-content">
@@ -78,11 +87,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-      
-
-        var myCarousel = document.querySelector('#carouselExampleSlidesOnly')
-        var carousel = new bootstrap.Carousel(myCarousel)
-    </script>
 </body>
 </html>

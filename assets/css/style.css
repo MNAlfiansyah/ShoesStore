@@ -11,6 +11,7 @@ body {
     overflow-x: hidden;
 }
 .header {
+    z-index: 100;
     position: fixed;
     padding-left: 30px;
     padding-right: 30px;
@@ -29,6 +30,7 @@ body {
     background: #dc3545;
     border-radius: 0px 0px 100px 100px;
     width: 0px;
+    margin-right: 70px;
 }
 
 .header .buy-now a {
@@ -55,15 +57,16 @@ body {
 }
 
 .content {
-    padding: 85px 255px 0px 255px;
-    height: 125em;
+    padding: 85px 255px 125px 255px;
+    height: fit-content;
 }
 
 .img-utama1 {
+    padding-top: 32px;
     height: 495px;
     background: no-repeat;
-    background-image: url(https://images.vans.com/is/image/VansBrand/FA21_WadeGoodall_1390x556_SurfSecondary?wid=1390);
-    background-position: top;
+    /* background-image: url(https://images.vans.com/is/image/VansBrand/FA21_WadeGoodall_1390x556_SurfSecondary?wid=1390); */
+    /* background-position: top; */
 }
 
 .img-couple {
@@ -95,17 +98,26 @@ body {
 }
 
 .img-vendor-logo img {
-    object-fit: cover;
+    object-fit: contain;
     width: 240px;
     height: 240px;
 }
+
+    /* .img-vendor-logo .col-4:nth-child(3) {
+        width: fit-content;
+    } */
 
 .rounded-vendor {
     
 }
 
+.title-content {
+    padding: 67px 0px 20px 0px;
+    font-size: xxx-large;
+}
+
 .card {
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     border: 0 !important;
 }
@@ -113,23 +125,251 @@ body {
 .card .card-header {
     padding: 0;
     border: 0;
-    background-color: blue;
+    background-color: lightgrey;
+    height: 350px;
+    /* width: 400px; */
+    position: relative;
     /* height: ; */
 }
 
 .card .card-header img {
+    height: 115px;
+    object-fit: cover;
+}
+
+
+.container-detail-product {
+    background: linen;
+    height: 600px;
+}
+
+.container-product {
+    background: lightgrey;
+    margin: 40px 0px 0px 40px;
+}
+
+.nama-product {
+    font-size: xx-large;
+    padding-top: 25px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.harga-product {
+    font-size: larger;
+    color: indianred;
+}
+
+
+
+.warna-product {
+
+}
+
+.buy-button {
+    width: 100px;
+    margin-top: 49px;
+}
+
+.size-product select {
+    width: 50%;
+}
+
+.size-product .form-control {
+    width: 20%;
+}
+
+.size-product span {
+    align-self: center;
+    width: 50px;
+}
+
+.card .card-header .label {
+    text-align: right;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    background: white;
+    margin: 10px;
+    padding: 5px;
+    font-style: italic;
+}
+
+
+.card .card-header img {
     border: 0;
-    height: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .card .card-content {
-    height: 200px;
+    height: fit-content;
+    padding: 20px 0px 0px 10px;
 }
 
+.card .card-content p {
+    opacity: 0.8;
+}
+
+.card .card-content p:nth-child(1) {
+    font-size: 18px;
+}
+
+.card .card-content p:nth-child(2) {
+    font-size: 16px;
+}
+
+.product-list {
+    color: black;
+    text-decoration: none;
+}
+
+.shipping-product {
+    border-bottom-style: inset;
+    padding-bottom: 10px;
+}
+
+.shipping-product .product-harga {
+    color: darkred;
+    align-self: center;
+    width: 125px;
+}
+
+.shipping-product img {
+    width: 60%;
+}
+
+.shipping-product .product-img {
+    width: 160px;
+    background: lightgrey;
+    height: 80px;
+    border-radius: 15px;
+}
+
+.shipping-product .product-name {
+    padding: 0px 0px 0px 10px;
+    color: grey;
+    align-self: center;
+    width: 200px;
+}
+
+.shipping-product .product-qty {
+    align-self: center;
+    width: 60px;
+}
+
+.shipping-title {
+    font-size: 18px;
+}
+
+.payment-method {
+    padding-bottom: 25px;
+}
+
+.payment-title {
+    margin-bottom: 0;
+    padding: 20px 0px 10px 0px;
+    font-size: 18px;
+}
+
+.subtotal {
+    margin-top: 265px;
+}
+
+.subtotal div:nth-child(1) {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subtotal div:nth-child(2) {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.invoice-title h2, .invoice-title h3 {
+    display: inline-block;
+}
+
+hr {
+    color: #0000004f;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.add td {
+    color: #c5c4c4;
+    text-transform: uppercase;
+    font-size: 12px
+}
+
+.content {
+    font-size: 14px
+}
+
+.img-flag {
+    width: 30px !important;
+}
+
+.profile .profile-header {
+    padding: 0;
+    border: 0;
+    /* height: 350px; */
+    /* width: 400px; */
+    position: relative;
+    /* height: ; */
+}
+
+.profile .profile-content {
+    height: fit-content;
+    padding: 20px 10px 0px 10px;
+}
+
+.profile .profile-content p {
+    opacity: 0.8;
+}
+
+.profile .profile-content p:nth-child(1) {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 0 !important;
+}
+
+.profile .profile-content p:nth-child(2) {
+    font-size: 15px;
+}
 
 .footer-content {
     background: #111111;
     height: 170px;
+    padding: 0px 255px 0px 255px;
+    display: flex;
+}
+
+.footer-img{
+    place-self: center;
+    background: white;
+    border-radius: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-img div:nth-child(2){
+    place-self: center;
+    padding-right: 30px;
+}
+
+.footer-img .fa-instagram {
+    color: palevioletred;
+}
+
+.footer-img img{
+    width: 80px;
+}
+
+.footer-img span{
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .footer-copy {
